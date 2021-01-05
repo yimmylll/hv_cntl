@@ -1,0 +1,2 @@
+N_CHN = 144
+ARRAY_LENGTH = 5
