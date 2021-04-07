@@ -44,7 +44,7 @@ def main():
     arr = []
 
     k = 0
-    P_CHANGE = 80
+    P_CHANGE = 191
     P_FIRST = 500
     TIME_BREAK = 0.5#SECOND
     while k < 10:
@@ -85,7 +85,11 @@ def main():
             res = dist/wavelength - int(dist/wavelength)
             phase = (1 - res) * cycle
 
-            if (index>82) and (index<125):
+            if (index>=72) and (index<=89):
+                arr[index].phase = int(phase)*0 + P_FIRST + P_CHANGE*k
+            if (index>=96) and (index<=97):
+                arr[index].phase = int(phase)*0 + P_FIRST + P_CHANGE*k
+            if (index>=102) and (index<=117):
                 arr[index].phase = int(phase)*0 + P_FIRST + P_CHANGE*k
             else:
                 arr[index].phase = int(phase)*0 + P_FIRST - P_CHANGE*k
@@ -122,8 +126,9 @@ def main():
         print('k=%d\n'%(k))
         if int(k) is 1:
             print('time sleep 10 s ...\n')
-            time.sleep(20)
+            time.sleep(10)
             print("10s finish\n")
+            time.sleep(10)
         else:
             time.sleep(TIME_BREAK)
 
